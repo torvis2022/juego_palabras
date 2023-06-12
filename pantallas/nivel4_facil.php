@@ -85,8 +85,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/dog.jpg" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/sonidoPerro.mp3" preload="auto"></audio>
+        <img src="Imagenes/tambor.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/tambor.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -101,11 +101,11 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('PE')">PE</button>
-        <button onclick="agregarTexto('RRO')">RRO</button>
-        <button onclick="agregarTexto('BRA')">BRA</button>
-        <button onclick="agregarTexto('BO')">BO</button>
-        <button onclick="agregarTexto('PA')">PA</button>
+        <button onclick="agregarTexto('NA')">NA</button>
+        <button onclick="agregarTexto('TAM')">TAM</button>
+        <button onclick="agregarTexto('SA')">SA</button>
+        <button onclick="agregarTexto('BOR')">BOR</button>
+        <button onclick="agregarTexto('TA')">TA</button>
         
     </center>
 
@@ -115,10 +115,10 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "perro") {
+            if (input.value.toLowerCase() === "tambor") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
-            } else if (input.value.length >= 4) {
+            } else if (input.value.length >= 6) {
                 var fallasteAudio = document.getElementById("fallasteAudio");
                 fallasteAudio.play();
             }
@@ -136,4 +136,5 @@
     </div>
 </body>
 </html>
+
 

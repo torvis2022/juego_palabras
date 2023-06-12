@@ -85,8 +85,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/dog.jpg" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/sonidoPerro.mp3" preload="auto"></audio>
+        <img src="Imagenes/campana.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/sonidoCampana.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -101,11 +101,11 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('PE')">PE</button>
-        <button onclick="agregarTexto('RRO')">RRO</button>
-        <button onclick="agregarTexto('BRA')">BRA</button>
-        <button onclick="agregarTexto('BO')">BO</button>
+        <button onclick="agregarTexto('NA')">NA</button>
+        <button onclick="agregarTexto('CAM')">CAM</button>
+        <button onclick="agregarTexto('SA')">SA</button>
         <button onclick="agregarTexto('PA')">PA</button>
+        <button onclick="agregarTexto('TA')">TA</button>
         
     </center>
 
@@ -115,10 +115,10 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "perro") {
+            if (input.value.toLowerCase() === "campana") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
-            } else if (input.value.length >= 4) {
+            } else if (input.value.length >= 7) {
                 var fallasteAudio = document.getElementById("fallasteAudio");
                 fallasteAudio.play();
             }
@@ -132,8 +132,9 @@
 
     <div class="botones-container">
         <button onclick="location.href='NivelesP.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel2_facil.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel4_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>
+
 
