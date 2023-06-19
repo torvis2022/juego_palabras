@@ -80,7 +80,6 @@
             display: flex;
             justify-content: space-between;
         }
-        
         .estrella {
             animation: estrellaAnimacion 1s ease infinite;
             width: 60px;
@@ -92,7 +91,6 @@
             right: 10px;
             /*transform: translateY(-50%);*/
         }
-
         @keyframes estrellaAnimacion {
             0% {
                 transform: scale(1);
@@ -109,8 +107,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/mono.jpg" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/sonidoMono.mp3" preload="auto"></audio>
+        <img src="Imagenes/casa.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/tambor.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -125,11 +123,10 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
+        <button onclick="agregarTexto('TA')">TA</button>
+        <button onclick="agregarTexto('SA')">SA</button>
+        <button onclick="agregarTexto('BO')">BO</button>
         <button onclick="agregarTexto('CA')">CA</button>
-        <button onclick="agregarTexto('NO')">NO</button>
-        <button onclick="agregarTexto('MA')">MA</button>
-        <button onclick="agregarTexto('MO')">MO</button>
-        <button onclick="agregarTexto('PA')">PA</button>
         
     </center>
 
@@ -139,7 +136,7 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "mono") {
+            if (input.value.toLowerCase() === "casa") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
                 // Agregar estrellitas
@@ -168,7 +165,7 @@
 
     <div class="botones-container">
         <button onclick="location.href='NivelesP.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel3_facil.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel5_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>

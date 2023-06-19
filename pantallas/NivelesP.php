@@ -11,14 +11,17 @@
 
     button {
         display: block;
-        width: 100px;
+        width: 200px;
         background-color: rgb(127, 206, 25);
         border-radius: 20px;
-        padding: 20px 23px;
+        padding: 40px 43px;
         margin: 20px 13px;
         color: #320841;
         text-decoration: none;
-        font-size: 23px; /* Tamaño de fuente más grande */
+        font-size: 30px; /* Tamaño de fuente más grande */
+        font-family: Arial, sans-serif; /* Fuente del texto */
+        font-weight: bold; /* Grosor del texto */
+        text-transform: uppercase; /* Transformar el texto a mayúsculas */
     }
     body {
         background-image: url("Imagenes/fondoninos.png");
@@ -37,6 +40,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            padding: 50px 63px;
+            margin: 20px 13px;
     }
  
 </style>
@@ -49,5 +54,5 @@
     <button onclick="location.href='Juego.php'">Nivel Dificil</button> <!-- Botón para ir a otra página -->
 </Center>
 <div class="botones-container">
-     <button onclick="location.href='ModoJuego.php'" class="boton-atras">ATRAS</button><!-- Botón para ir a otra página -->
+     <button onclick="location.href='ModoJuego.php'" class="boton-atras">     </button><!-- Botón para ir a otra página -->
 </html>

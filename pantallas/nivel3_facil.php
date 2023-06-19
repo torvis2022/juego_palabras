@@ -24,7 +24,7 @@
             background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
             border-radius: 10px;
             padding: 15px 30px;
-            margin: 5px;
+            margin: 15px;
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
@@ -80,6 +80,29 @@
             display: flex;
             justify-content: space-between;
         }
+        .estrella {
+            animation: estrellaAnimacion 1s ease infinite;
+            width: 60px;
+        }
+
+        .estrellas-container {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            /*transform: translateY(-50%);*/
+        }
+
+        @keyframes estrellaAnimacion {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,6 +141,18 @@
             if (input.value.toLowerCase() === "campana") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
+                
+                // Agregar estrellitas
+                var estrellasContainer = document.createElement('div');
+                estrellasContainer.classList.add('estrellas-container');
+                for (var i = 0; i < 5; i++) {
+                    var estrella = document.createElement('img');
+                    estrella.src = 'Imagenes/estrellita.png';
+                    estrella.classList.add('estrella');
+                    estrellasContainer.appendChild(estrella);
+                }
+                var body = document.querySelector('body');
+                body.appendChild(estrellasContainer);
             } else if (input.value.length >= 7) {
                 var fallasteAudio = document.getElementById("fallasteAudio");
                 fallasteAudio.play();
