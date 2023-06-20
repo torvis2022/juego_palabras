@@ -18,13 +18,14 @@
     
         button {
             display: block;
-            width: 200px;
+            width: 300px;
             background-color: rgb(127, 206, 256);
             border-radius: 20px;
             padding: 15px 30px;
             margin: 15px 13px;
             color: #22083c;
             text-decoration: none;
+            font-size: 25px; /* Tamaño de fuente */
         }
     
         button:hover {

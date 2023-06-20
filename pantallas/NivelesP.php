@@ -43,9 +43,12 @@
             padding: 50px 63px;
             margin: 20px 13px;
     }
- 
+    h1 {
+        text-align: center; /* Centrar el texto del título */
+    }
 </style>
-<body></body> <!-- Cuerpo de la página vacío -->
+<body> <!-- Cuerpo de la página -->
+<h1>ESCOGE UN NIVEL</h1> <!-- Título visible en la página -->
 <Center>
     
     <br>
@@ -55,4 +58,6 @@
 </Center>
 <div class="botones-container">
      <button onclick="location.href='ModoJuego.php'" class="boton-atras">     </button><!-- Botón para ir a otra página -->
+</body> <!-- Cuerpo de la página -->
 </html>
+
