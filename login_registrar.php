@@ -5,10 +5,11 @@ session_start();
 
 $nombres = $_POST["nombresUsu"];
 $apellidos   = $_POST["apePaternoUsu"];
+$apellidosm   = $_POST["apeMaternoAlum"];
 
 if(isset($_POST["btningresar"]))
 {
-	$query =("SELECT COUNT(*) as contar FROM usuario WHERE nombresUsu = '$nombres' AND apePaternoUsu='$apellidos'");
+	$query =("SELECT COUNT(*) as contar FROM usuario WHERE nomAlum = '$nombres' AND appAlum='$apellidos'AND apmAlum='$apellidosm'");
 	$consulta = mysqli_query($conn, $query);
 	$array = mysqli_fetch_array($consulta);
 	
@@ -18,7 +19,7 @@ if(isset($_POST["btningresar"]))
 		header('location: pantallas/ModoJuego.php');
 	}else
 	{
-		echo "<script> alert('Usuario no existe'); window.location='index.html' </script>";
+		echo "<script> alert('Usuario no existe'); window.location='index.php' </script>";
 	}
 }
 
@@ -27,7 +28,7 @@ if(isset($_POST["btningresar"]))
 //Registrar
 if(isset($_POST["btnregistrar"]))
 {
-	$sqlgrabar = "INSERT INTO usuario(nombresUsu,apePaternoUsu) values ('$nombres','$apellidos')";
+	$sqlgrabar = "INSERT INTO usuario(nomAlum,appAlum,apmAlum) values ('$nombres','$apellidos','$apellidosm')";
 	
 	if(mysqli_query($conn,$sqlgrabar))
 	{
