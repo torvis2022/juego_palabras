@@ -21,13 +21,14 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color: #BB8FCE; /* Fondo para los botones */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia " , sans-serif" por la fuente que desees utilizar */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -163,6 +164,11 @@
         function borrarTexto() {
             var input = document.getElementById("texto");
             input.value = "";
+            // Eliminar el contenedor de las estrellas
+        var estrellasContainer = document.querySelector('.estrellas-container');
+         if (estrellasContainer) {
+             estrellasContainer.parentNode.removeChild(estrellasContainer);
+        }
         }
     </script>
 

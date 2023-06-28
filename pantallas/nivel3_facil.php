@@ -21,13 +21,14 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color:#58D68D ; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
-            margin: 15px;
+            margin: 5px;
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -80,18 +81,17 @@
             display: flex;
             justify-content: space-between;
         }
+
         .estrella {
             animation: estrellaAnimacion 1s ease infinite;
             width: 60px;
         }
-
         .estrellas-container {
             position: absolute;
             top: 10%;
             right: 10px;
-            /*transform: translateY(-50%);*/
+            transform: translatey(-50%);
         }
-
         @keyframes estrellaAnimacion {
             0% {
                 transform: scale(1);
@@ -108,8 +108,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/campana.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/sonidoCampana.mp3" preload="auto"></audio>
+        <img src="Imagenes/carro.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/carro.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -124,11 +124,11 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('NA')">NA</button>
-        <button onclick="agregarTexto('CAM')">CAM</button>
-        <button onclick="agregarTexto('SA')">SA</button>
+
+        <button onclick="agregarTexto('RRO')">RRO</button>
+        <button onclick="agregarTexto('RA')">RA</button>
+        <button onclick="agregarTexto('CA')">CA</button>
         <button onclick="agregarTexto('PA')">PA</button>
-        <button onclick="agregarTexto('TA')">TA</button>
         
     </center>
 
@@ -138,10 +138,10 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "campana") {
+            if (input.value.toLowerCase() === "carro") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
-                
+
                 // Agregar estrellitas
                 var estrellasContainer = document.createElement('div');
                 estrellasContainer.classList.add('estrellas-container');
@@ -151,9 +151,10 @@
                     estrella.classList.add('estrella');
                     estrellasContainer.appendChild(estrella);
                 }
+
                 var body = document.querySelector('body');
                 body.appendChild(estrellasContainer);
-            } else if (input.value.length >= 7) {
+            } else if (input.value.length >= 5) {
                 var fallasteAudio = document.getElementById("fallasteAudio");
                 fallasteAudio.play();
             }
@@ -162,6 +163,11 @@
         function borrarTexto() {
             var input = document.getElementById("texto");
             input.value = "";
+            // Eliminar el contenedor de las estrellas
+        var estrellasContainer = document.querySelector('.estrellas-container');
+         if (estrellasContainer) {
+             estrellasContainer.parentNode.removeChild(estrellasContainer);
+        }
         }
     </script>
 
@@ -171,5 +177,3 @@
     </div>
 </body>
 </html>
-
-

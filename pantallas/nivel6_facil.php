@@ -21,13 +21,14 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color:#58D68D ; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -80,16 +81,16 @@
             display: flex;
             justify-content: space-between;
         }
+
         .estrella {
             animation: estrellaAnimacion 1s ease infinite;
             width: 60px;
         }
-
         .estrellas-container {
             position: absolute;
             top: 10%;
             right: 10px;
-            /*transform: translateY(-50%);*/
+            transform: translatey(-50%);
         }
         @keyframes estrellaAnimacion {
             0% {
@@ -107,8 +108,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/casa.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/casa.mp3" preload="auto"></audio>
+        <img src="Imagenes/mapa.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/mapa.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -123,10 +124,10 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('TA')">TA</button>
-        <button onclick="agregarTexto('SA')">SA</button>
+        <button onclick="agregarTexto('PO')">PO</button>
+        <button onclick="agregarTexto('MA')">MA</button>
         <button onclick="agregarTexto('BO')">BO</button>
-        <button onclick="agregarTexto('CA')">CA</button>
+        <button onclick="agregarTexto('PA')">PA</button>
         
     </center>
 
@@ -136,9 +137,10 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "casa") {
+            if (input.value.toLowerCase() === "mapa") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
+
                 // Agregar estrellitas
                 var estrellasContainer = document.createElement('div');
                 estrellasContainer.classList.add('estrellas-container');
@@ -160,7 +162,6 @@
         function borrarTexto() {
             var input = document.getElementById("texto");
             input.value = "";
-
             // Eliminar el contenedor de las estrellas
         var estrellasContainer = document.querySelector('.estrellas-container');
          if (estrellasContainer) {
@@ -171,9 +172,7 @@
 
     <div class="botones-container">
         <button onclick="location.href='NivelesP.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel6_facil.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel2_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>
-
-
