@@ -28,6 +28,8 @@
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
+            transition: transform 0.3s ease; /* Transición suave de la propiedad transform */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -38,6 +40,7 @@
             background-color: transparent;
             border: 2px solid blue;
             color: blue;
+            transform: scale(1.1); /* Escala el botón al 110% en hover */
         }
 
         #texto {
@@ -139,7 +142,7 @@
 
   // Verificar si la palabra completa ha sido formada
         if (input.value.toLowerCase() === "mimamámeama") {
-         var palabras = ["MI", "MA" , "MÁ", "ME", "AMA"];
+         var palabras = ["MI", "MAMÁ", "ME", "AMA"];
         var fraseSeparada = palabras.join(" ");
 
         var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
@@ -169,12 +172,18 @@
      function borrarTexto() {
         var input = document.getElementById("texto");
          input.value = "";
+
+         // Eliminar el contenedor de las estrellas
+        var estrellasContainer = document.querySelector('.estrellas-container');
+         if (estrellasContainer) {
+             estrellasContainer.parentNode.removeChild(estrellasContainer);
+        }
      }
     </script>
 
     <div class="botones-container">
         <button onclick="location.href='NivelesO.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel2_facil.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel2_facil'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <style>
         /* Estilos CSS para los elementos de la página */
         body {
-            background-color: #C0C0C0; /* Color de fondo verde para toda la página */
+            background-color: #BB8FCE ; /* Color de fondo verde para toda la página */
         }
 
         h1 {
@@ -25,9 +25,12 @@
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
-            color: #22083c;
+            color: #22083c;/* Cambia  por el color de texto que desees */
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
+            transition: transform 0.3s ease; /* Transición suave de la propiedad transform */
+        
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -38,6 +41,7 @@
             background-color: transparent;
             border: 2px solid blue;
             color: blue;
+            transform: scale(1.1); /* Escala el botón al 110% en hover */
         }
 
         #texto {
@@ -62,7 +66,7 @@
 
         /* Establecer imagen de fondo para el botón "Atrás" */
         .boton-atras {
-            background-image: url('Imagenes/atras.png'); /*  'ruta-de-la-imagen' con la ruta de tu imagen */
+            background-image: url('Imagenes/atras.png'); /*  ruta de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -70,7 +74,7 @@
 
         /* Establecer imagen de fondo para el botón "Siguiente" */
         .boton-siguiente {
-            background-image: url('Imagenes/adelante.png'); /* 'ruta-de-la-imagen' con la ruta de tu imagen */
+            background-image: url('Imagenes/adelante.png'); /*  ruta de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -171,7 +175,13 @@
      function borrarTexto() {
         var input = document.getElementById("texto");
          input.value = "";
-     }
+
+          // Eliminar el contenedor de las estrellas
+        var estrellasContainer = document.querySelector('.estrellas-container');
+         if (estrellasContainer) {
+             estrellasContainer.parentNode.removeChild(estrellasContainer);
+        }
+    }
     </script>
 
     <div class="botones-container">
