@@ -163,11 +163,11 @@
         function borrarTexto() {
             var input = document.getElementById("texto");
             input.value = "";
-            // Eliminar el contenedor de las estrellas
-        var estrellasContainer = document.querySelector('.estrellas-container');
-         if (estrellasContainer) {
-             estrellasContainer.parentNode.removeChild(estrellasContainer);
-        }
+                // Eliminar el contenedor de las estrellas
+            var estrellasContainer = document.querySelector('.estrellas-container');
+            if (estrellasContainer) {
+                estrellasContainer.parentNode.removeChild(estrellasContainer);
+            }
         }
     </script>
 

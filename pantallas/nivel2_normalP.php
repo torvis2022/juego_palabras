@@ -108,8 +108,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/campana.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/sonidoCampana.mp3" preload="auto"></audio>
+        <img src="Imagenes/montaña.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/montaña.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -124,11 +124,11 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('NA')">NA</button>
+        <button onclick="agregarTexto('MON')">MON</button>
         <button onclick="agregarTexto('CAM')">CAM</button>
-        <button onclick="agregarTexto('SA')">SA</button>
-        <button onclick="agregarTexto('PA')">PA</button>
         <button onclick="agregarTexto('TA')">TA</button>
+        <button onclick="agregarTexto('PA')">PA</button>
+        <button onclick="agregarTexto('ÑA')">ÑA</button>
         
     </center>
 
@@ -138,7 +138,7 @@
             input.value += texto;
 
             // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "campana") {
+            if (input.value.toLowerCase() === "montaña") {
                 var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
                 felicitacionesAudio.play();
                 
@@ -172,9 +172,7 @@
 
     <div class="botones-container">
         <button onclick="location.href='NivelesP.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel2_normalP.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel4_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>
-
-
