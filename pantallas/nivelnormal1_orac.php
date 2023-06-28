@@ -9,7 +9,7 @@
     <style>
         /* Estilos CSS para los elementos de la página */
         body {
-            background-color: #C0C0C0; /* Color de fondo verde para toda la página */
+            background-color: #BB8FCE ; /* Color de fondo verde para toda la página */
         }
 
         h1 {
@@ -21,15 +21,16 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo  para los botones  */
+            background-color:#F9E79F; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
-            color: #22083c;
+            color: #22083c;/* Cambia  por el color de texto que desees */
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
             font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
             transition: transform 0.3s ease; /* Transición suave de la propiedad transform */
+        
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
@@ -65,7 +66,7 @@
 
         /* Establecer imagen de fondo para el botón "Atrás" */
         .boton-atras {
-            background-image: url('Imagenes/atras.png'); /*  'ruta-de-la-imagen' con la ruta de tu imagen */
+            background-image: url('Imagenes/atras.png'); /*  ruta de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -73,7 +74,7 @@
 
         /* Establecer imagen de fondo para el botón "Siguiente" */
         .boton-siguiente {
-            background-image: url('Imagenes/adelante.png'); /* 'ruta-de-la-imagen' con la ruta de tu imagen */
+            background-image: url('Imagenes/adelante.png'); /*  ruta de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -110,8 +111,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/mimama.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/mimameama.mp3" preload="auto"></audio>
+        <img src="Imagenes/mipapalimpia.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/limpiamesa.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -126,12 +127,14 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('PE')">PE</button>
+        <button onclick="agregarTexto('PA')">PA</button>
         <button onclick="agregarTexto('MI')">MI</button>
+        <button onclick="agregarTexto('PIA')">PIA</button>
+        <button onclick="agregarTexto('LIM')">LIM</button>
+        <button onclick="agregarTexto('PÁ')">PÁ</button>
         <button onclick="agregarTexto('ME')">ME</button>
-        <button onclick="agregarTexto('MA')">MA</button>
-        <button onclick="agregarTexto('AMA')">AMA</button>
-        <button onclick="agregarTexto('MÁ')">MÁ</button>
+        <button onclick="agregarTexto('LA')">LA</button>
+        <button onclick="agregarTexto('SA')">SA</button>
         
     </center>
 
@@ -141,8 +144,8 @@
         input.value += texto;
 
   // Verificar si la palabra completa ha sido formada
-        if (input.value.toLowerCase() === "mimamámeama") {
-         var palabras = ["MI", "MAMÁ", "ME", "AMA"];
+        if (input.value.toLowerCase() === "mipapálimpialamesa") {
+         var palabras = ["MI", "PAPÁ", "LIMPIA" ,"LA" ,"MESA"];
         var fraseSeparada = palabras.join(" ");
 
         var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
@@ -163,7 +166,7 @@
 
         var body = document.querySelector('body');
         body.appendChild(estrellasContainer);
-    } else if (input.value.length >= 10) {
+    } else if (input.value.length >= 17) {
     var fallasteAudio = document.getElementById("fallasteAudio");
     fallasteAudio.play();
      }
@@ -173,17 +176,17 @@
         var input = document.getElementById("texto");
          input.value = "";
 
-         // Eliminar el contenedor de las estrellas
+          // Eliminar el contenedor de las estrellas
         var estrellasContainer = document.querySelector('.estrellas-container');
          if (estrellasContainer) {
              estrellasContainer.parentNode.removeChild(estrellasContainer);
         }
-     }
+    }
     </script>
 
     <div class="botones-container">
         <button onclick="location.href='NivelesO.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel2_facil'" class="boton-siguiente">    </button>
+        <button onclick="location.href='nivel2_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>

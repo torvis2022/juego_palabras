@@ -8,7 +8,7 @@
 
 <body>
 <form>
-<h2>Vienvenidos</h2>
+<h2>Bienvenidos</h2>
 <br>
 <a href="index.php" style="float:right">Regresar</a>
 

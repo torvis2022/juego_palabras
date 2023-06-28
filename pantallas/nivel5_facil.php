@@ -108,7 +108,7 @@
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
         <img src="Imagenes/casa.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/tambor.mp3" preload="auto"></audio>
+        <audio id="sonido" src="Sonidos/casa.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -160,6 +160,12 @@
         function borrarTexto() {
             var input = document.getElementById("texto");
             input.value = "";
+
+            // Eliminar el contenedor de las estrellas
+        var estrellasContainer = document.querySelector('.estrellas-container');
+         if (estrellasContainer) {
+             estrellasContainer.parentNode.removeChild(estrellasContainer);
+        }
         }
     </script>
 
