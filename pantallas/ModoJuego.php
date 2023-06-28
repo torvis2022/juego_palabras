@@ -11,7 +11,7 @@
     
         body {
             background-image: url('Imagenes/ninos.png');
-            background-size: 85%;/* valor para reducir imagen*/
+            background-size: 60%;/* valor para reducir imagen*/
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -21,11 +21,11 @@
             width: 300px;
             background-color: rgb(127, 206, 256);
             border-radius: 20px;
-            padding: 15px 30px;
-            margin: 15px 13px;
+            padding: 30px 30px;
+            margin: 40px 13px;
             color: #22083c;
             text-decoration: none;
-            font-size: 25px; /* Tamaño de fuente */
+            font-size: 40px; /* Tamaño de fuente */
         }
     
         button:hover {
@@ -36,9 +36,11 @@
     </style>
 </head>
 <body>
-    <title>ESCOGE COMO JUGAR</title>
+   
     <div id="contenedor">
+        
         <center>
+        <title>ESCOGE COMO JUGAR</title>
             <br>
             <button onclick="location.href='NivelesP.php'">Crear Palabras</button>
         </center>  
