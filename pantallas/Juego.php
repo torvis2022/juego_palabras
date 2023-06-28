@@ -21,13 +21,14 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color:#58D68D ; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia "Arial, sans-serif" por la fuente que desees utilizar */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */
