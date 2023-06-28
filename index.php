@@ -3,13 +3,14 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Login</title>
+<title>&#x1F3AE; "ADMINISTRADOR | Juegos "</title> 
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
 <form action="login_registrar.php" method="POST">
 <h2>Iniciar sesión</h2>
-<input type="text" placeholder="&#11093; Nombres" name="nombresUsu" required pattern="[a-zA-Z]+">
+<input type="text" placeholder="&#11093; Nombres" name="nombresUsu"required  pattern="[a-zA-Z]+" >
 <input type="text" placeholder="&#11093; Apellidos" name="apePaternoUsu" required  pattern="[a-zA-Z]+">
 <input type="text" placeholder="&#11093; Apellidosm" name="apeMaternoAlum" required  pattern="[a-zA-Z]+">
 <input type="submit" value="Ingresar" name="btningresar">

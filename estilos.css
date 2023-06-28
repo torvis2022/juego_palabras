@@ -78,3 +78,9 @@ body {
       width: 100%;
     }
   }
+
+
+    /* Estilo para ocultar el icono de XAMPP */
+    :not([rel="icon"]):not([rel="shortcut icon"]) {
+        display: none !important;
+    }
