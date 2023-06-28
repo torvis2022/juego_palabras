@@ -21,7 +21,7 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color:#F9E79F; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
@@ -80,16 +80,16 @@
             display: flex;
             justify-content: space-between;
         }
+
         .estrella {
             animation: estrellaAnimacion 1s ease infinite;
             width: 60px;
         }
-
         .estrellas-container {
             position: absolute;
             top: 10%;
             right: 10px;
-            /*transform: translateY(-50%);*/
+            transform: translatey(-50%);
         }
         @keyframes estrellaAnimacion {
             0% {
@@ -107,8 +107,8 @@
 <body>
     <center>
         <h1>ESCUCHA Y RESPONDE</h1>
-        <img src="Imagenes/casa.png" alt="Imagen" onclick="reproducirSonido()">
-        <audio id="sonido" src="Sonidos/casa.mp3" preload="auto"></audio>
+        <img src="Imagenes/mipapalimpia.png" alt="Imagen" onclick="reproducirSonido()">
+        <audio id="sonido" src="Sonidos/limpiamesa.mp3" preload="auto"></audio>
         <audio id="fallasteAudio" src="Sonidos/error.mp3" preload="auto"></audio>
 
         <script>
@@ -123,51 +123,60 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('TA')">TA</button>
+        <button onclick="agregarTexto('PA')">PA</button>
+        <button onclick="agregarTexto('MI')">MI</button>
+        <button onclick="agregarTexto('PIA')">PIA</button>
+        <button onclick="agregarTexto('LIM')">LIM</button>
+        <button onclick="agregarTexto('PÁ')">PÁ</button>
+        <button onclick="agregarTexto('ME')">ME</button>
+        <button onclick="agregarTexto('LA')">LA</button>
         <button onclick="agregarTexto('SA')">SA</button>
-        <button onclick="agregarTexto('BO')">BO</button>
-        <button onclick="agregarTexto('CA')">CA</button>
         
     </center>
 
     <script>
         function agregarTexto(texto) {
-            var input = document.getElementById("texto");
-            input.value += texto;
+        var input = document.getElementById("texto");
+        input.value += texto;
 
-            // Verificar si la palabra completa ha sido formada
-            if (input.value.toLowerCase() === "casa") {
-                var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
-                felicitacionesAudio.play();
-                // Agregar estrellitas
-                var estrellasContainer = document.createElement('div');
-                estrellasContainer.classList.add('estrellas-container');
-                for (var i = 0; i < 5; i++) {
-                    var estrella = document.createElement('img');
-                    estrella.src = 'Imagenes/estrellita.png';
-                    estrella.classList.add('estrella');
-                    estrellasContainer.appendChild(estrella);
-                }
+  // Verificar si la palabra completa ha sido formada
+        if (input.value.toLowerCase() === "mipapálimpialamesa") {
+         var palabras = ["MI", "PAPÁ", "LIMPIA" ,"LA" ,"MESA"];
+        var fraseSeparada = palabras.join(" ");
 
-                var body = document.querySelector('body');
-                body.appendChild(estrellasContainer);
-            } else if (input.value.length >= 4) {
-                var fallasteAudio = document.getElementById("fallasteAudio");
-                fallasteAudio.play();
-            }
+        var felicitacionesAudio = new Audio('Sonidos/felicidades.mp3');
+        felicitacionesAudio.play();
+
+    // Mostrar la frase separada en la pantalla
+        input.value = fraseSeparada;
+
+    // Agregar estrellitas
+        var estrellasContainer = document.createElement('div');
+        estrellasContainer.classList.add('estrellas-container');
+        for (var i = 0; i < 5; i++) {
+            var estrella = document.createElement('img');
+        estrella.src = 'Imagenes/estrellita.png';
+        estrella.classList.add('estrella');
+        estrellasContainer.appendChild(estrella);
         }
 
-        function borrarTexto() {
-            var input = document.getElementById("texto");
-            input.value = "";
-        }
+        var body = document.querySelector('body');
+        body.appendChild(estrellasContainer);
+    } else if (input.value.length >= 17) {
+    var fallasteAudio = document.getElementById("fallasteAudio");
+    fallasteAudio.play();
+     }
+    }
+
+     function borrarTexto() {
+        var input = document.getElementById("texto");
+         input.value = "";
+     }
     </script>
 
     <div class="botones-container">
-        <button onclick="location.href='NivelesP.php'" class="boton-atras">   </button>
-        <button onclick="location.href='nivel5_facil.php'" class="boton-siguiente">    </button>
+        <button onclick="location.href='NivelesO.php'" class="boton-atras">   </button>
+        <button onclick="location.href='nivel2_facil.php'" class="boton-siguiente">    </button>
     </div>
 </body>
 </html>
-
-

@@ -55,7 +55,7 @@
     
     <br>
     <button onclick="location.href='nivelfacil1_orac.php'">Nivel Facil</button> <!-- Botón para ir a otra página -->
-    <button onclick="location.href='Juego.php'">Nivel Normal</button> <!-- Botón para ir a otra página -->
+    <button onclick="location.href='nivelnormal1_orac.php'">Nivel Normal</button> <!-- Botón para ir a otra página -->
     <button onclick="location.href='Juego.php'">Nivel Dificil</button> <!-- Botón para ir a otra página -->
 </Center>
 <div class="botones-container">

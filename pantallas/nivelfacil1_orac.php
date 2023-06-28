@@ -21,7 +21,7 @@
             display: inline-block;
             width: 150px;
             height: 80px;
-            background-color: white; /* Fondo blanco para los botones de "Atrás" y "Siguiente" */
+            background-color: white; /* Fondo  para los botones  */
             border-radius: 10px;
             padding: 15px 30px;
             margin: 5px;
