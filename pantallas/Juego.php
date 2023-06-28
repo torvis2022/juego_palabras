@@ -124,11 +124,11 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('PE')">PE</button>
+        
         <button onclick="agregarTexto('RRO')">RRO</button>
-        <button onclick="agregarTexto('BRA')">BRA</button>
-        <button onclick="agregarTexto('BO')">BO</button>
-        <button onclick="agregarTexto('PA')">PA</button>
+        <button onclick="agregarTexto('RA')">RA</button>
+        <button onclick="agregarTexto('PE')">PE</button>
+       
         
     </center>
 

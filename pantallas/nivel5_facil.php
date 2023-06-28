@@ -28,6 +28,7 @@
             color: #22083c;
             text-decoration: none;
             font-size: 20px; /* Tamaño de fuente */
+            font-family: Arial Black, sans-serif; /* Cambia " sans-serif" por la fuente que desees utilizar */
         }
         img {
             width: 300px; /* Establecer el ancho deseado para la imagen */

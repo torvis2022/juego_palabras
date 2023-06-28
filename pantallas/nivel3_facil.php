@@ -128,7 +128,7 @@
         <button onclick="agregarTexto('RRO')">RRO</button>
         <button onclick="agregarTexto('RA')">RA</button>
         <button onclick="agregarTexto('CA')">CA</button>
-        <button onclick="agregarTexto('PA')">PA</button>
+    
         
     </center>
 

@@ -126,7 +126,6 @@
         
         <button onclick="borrarTexto()" class="boton-borrar">Borrar</button>
 
-        <button onclick="agregarTexto('CA')">CA</button>
         <button onclick="agregarTexto('NO')">NO</button>
         <button onclick="agregarTexto('MA')">MA</button>
         <button onclick="agregarTexto('MO')">MO</button>
